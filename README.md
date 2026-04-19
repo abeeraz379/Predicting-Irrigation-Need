@@ -1,10 +1,9 @@
 # Predicting-Irrigation-Need
 - By : ABeer Al-Zebda | Machine Learning Engineer
-A supervised machine learning project that predicts irrigation needs using multi-class classification techniques. The model is trained on a synthetic dataset (630,000 samples) generated from a deep learning model using the original Irrigation Water Requirement Prediction Dataset. 
 
-# 📋 **Predicting Irrigation Need - Project Steps**
-
-## **Project Workflow - Step by Step with Results**
+# 📋 **Project Overview **
+**A supervised machine learning project that predicts irrigation needs using multi-class classification techniques. The model is trained on a synthetic dataset (630,000 samples) generated from a deep learning model using the original Irrigation Water Requirement Prediction Dataset.**
+## **Project Workflow **
 
 ### **1. Environment Setup**
 **Actions:** Install ML libraries, setup Jupyter environment  
