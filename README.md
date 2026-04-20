@@ -3,6 +3,7 @@
 
 # 📋 **Project Overview **
 **A supervised machine learning project that predicts irrigation needs using multi-class classification techniques. The model is trained on a synthetic dataset (630,000 samples) generated from a deep learning model using the original Irrigation Water Requirement Prediction Dataset.**
+**competition link : https://www.kaggle.com/competitions/playground-series-s6e4/data**
 ## **Project Workflow **
 
 ### **1. Environment Setup**
