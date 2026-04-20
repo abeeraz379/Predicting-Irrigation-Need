@@ -45,14 +45,17 @@ ColumnTransformer(
 
 ### **5. Model Training Sequence**
 
-**A. Baseline Model (Random Forest)**
-- **✅ Result:** Accuracy **89.8%** on validation set
+  
+| # | Model                  | Key Features             | Validation Accuracy |
+| - | ---------------------- | ------------------------ | ------------------- |
+| 1 | RandomForestClassifier | Baseline ensemble        | 89.8%               |
+| 2 | XGBClassifier          | Base gradient boosting   | 91.3%               |
+| 3 | Tuned XGBClassifier    | Hyperparameter optimized | 91.9%               |
+| 4 | LGBMClassifier         | Light gradient boosting  | 91.7%               |
+| 5 | KNN Classifier         | Distance-based           | 87.5%               |
+| 6 | LogisticRegression     | Linear baseline          | 86.2%               |
+| 7 | CatBoostClassifier ⭐   | Best performing          | 92.1%               |
 
-**B. XGBoost Classifier** 
-- **✅ Result:** Accuracy **91.3%** (improved +1.5%)
-
-**C. CatBoost Classifier (Best Model)**
-- **✅ Result:** Accuracy **92.1%** (state-of-the-art performance)
 
 ### **6. Model Evaluation**
 **Actions:** Confusion matrices, classification reports  
@@ -91,12 +94,15 @@ submission_catboost.csv created:
 - Prediction brackets → Clean string mapping
 
 ### **10. Final Model Performance Summary**
-| Model | Validation Accuracy | Low F1 | Medium F1 | High F1 |
-|-------|--------------------|--------|-----------|---------|
-| **CatBoost** | **92.1%** ✅ | **0.935** | **0.915** | **0.880** |
-| XGBoost | 91.3% | 0.930 | 0.910 | 0.875 |
-| RandomForest | 89.8% | 0.915 | 0.895 | 0.860 |
-
+| Rank | Model                  | Accuracy | Low F1 | Medium F1 | High F1 |
+| ---- | ---------------------- | -------- | ------ | --------- | ------- |
+|  1 | **CatBoostClassifier**     | 92.1%    | 0.935  | 0.915     | 0.880   |
+|  2 | Tuned XGBClassifier    | 91.9%    | 0.932  | 0.913     | 0.882   |
+|  3 | LGBMClassifier         | 91.7%    | 0.931  | 0.911     | 0.880   |
+| 4    | XGBClassifier          | 91.3%    | 0.930  | 0.910     | 0.875   |
+| 5    | RandomForestClassifier | 89.8%    | 0.915  | 0.895     | 0.860   |
+| 6    | KNN Classifier         | 87.5%    | 0.885  | 0.870     | 0.845   |
+| 7    | LogisticRegression     | 86.2%    | 0.875  | 0.860     | 0.830   |
 ***
 
 
