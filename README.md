@@ -7,28 +7,38 @@
 **competition link : https://www.kaggle.com/competitions/playground-series-s6e4/data**
 ## **Project Workflow **
 
-### **1. Environment Setup**
-**Actions:** Install ML libraries, setup Jupyter environment  
-**✅ Result:** All dependencies installed successfully (pandas, scikit-learn, XGBoost, CatBoost)
-
+### **1. Libraries**
+**Imported Libraries:**
+* `pandas`, `numpy` - Data manipulation
+* `sklearn` - Preprocessing, pipelines, metrics
+* `xgboost`, `catboost` - Gradient boosting models
+* `matplotlib`, `seaborn` - Visualization
+  
 ### **2. Data Loading & Exploration** 
-**Actions:** Load train/test datasets, initial EDA  
-**✅ Result:** 
-- Training data: **630,000 rows × 21 columns**
-- Test data: **270,000 rows**
-- Target distribution: Low(59%), Medium(38%), High(3%)
-- 12 numerical + 9 categorical features identified
+```
+train.csv (630,000 rows × 21 columns)
+test.csv (270,000 rows)
+```
+
+**Key Features:**
+* Soil properties: `Soil_Type`, `Soil_pH`, `Soil_Moisture`, `Organic_Carbon`
+* Weather: `Temperature_C`, `Humidity`, `Rainfall_mm`, `Sunlight_Hours`
+* Agricultural: `Crop_Type`, `Crop_Growth_Stage`, `Field_Area_hectare`
+* **Target:** `Irrigation_Need` (Low(59%), Medium(38%), High(3%))
+
 
 ### **3. Data Preprocessing Pipeline**
-**Actions:** Create ColumnTransformer (StandardScaler + OneHotEncoder)  
-**✅ Result:** 
-- Pipeline created successfully
-- Numerical features standardized (mean=0, std=1)
-- Categorical features one-hot encoded (no missing values)
+ColumnTransformer(
+    numeric: StandardScaler
+    categorical: OneHotEncoder
+)
+
+**Numerical features** → Standardized
+**Categorical features** → One-hot encoded
+
 
 ### **4. Train-Validation Split**
-**Actions:** 80/20 stratified split  
-**✅ Result:** 
+**Actions:** 80/20 stratified split   
 - Training set: **504,000 samples**
 - Validation set: **126,000 samples**
 - Class balance preserved across splits
@@ -98,4 +108,3 @@ submission_catboost.csv created:
 - ✅ **GitHub documentation complete**
 
 
-**Copy this directly to README.md!** Complete steps + results included.
